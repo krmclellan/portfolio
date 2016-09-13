@@ -13,7 +13,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
   </head>
-<div class="container">
+<div class="wrapper">
 <header>
 <h1>
 	Karen McLellan
@@ -21,8 +21,9 @@
 <ul class="nav">
 	<li><%= link_to "Home", root_path %></li>
 	<li><%= link_to "Projects", projects_path %></li>
-	<li><a href="#">Contact</a></li>
+	<li><%= link_to "Blog", "http://www.karenmclellan.com/blog", :target => "blank" %></li>
 	<li><a href="#">About</a></li>	
+	<li><a href="#">Contact</a></li>
 	</ul>
 
 </header>
@@ -39,5 +40,5 @@
 						&copy; Karen McLellan 2016
 					</p>
 				</footer>
-</div
+</div>
 </html>
