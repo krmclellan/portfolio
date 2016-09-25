@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@mixin rink-image($file, $type, $width: 100%, $max-width: 550px, $height: 275px, $border: 15px solid #fdcb04, $border-radius: 50px,
+@mixin rink-image($file, $type, $width: 100%, $max-width: 550px, $height: 275px, $border: 12px solid #fdcb04, $border-radius: 65px,
     $padding: 20px, $margin: 10px, $background-repeat: no-repeat) {
     background: url($file + '.' + $type);
     background-size: $width $height;
@@ -14,6 +14,16 @@
     margin: $margin;
 } 
 
+@mixin rink-image-vertical($file, $type, $width: 275px, $height: 550px, $border: 12px solid #fdcb04, $border-radius: 50px,
+    $padding: 20px, $margin: 10px, $background-repeat: no-repeat) {
+    background: url($file + '.' + $type);
+    background-size: $width $height;
+    width: $width; height: $height;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+    margin: $margin;
+}
 
 body,
 html {
@@ -21,14 +31,24 @@ html {
     height: 100%;
 }
 
-body,
-h1,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: black;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
 }
 
@@ -58,8 +78,8 @@ h6 {
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+    font-size: 7em;
 }
 
 .intro-divider {
@@ -71,6 +91,7 @@ h6 {
 .intro-message > h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     text-transform: uppercase;
+    font-size: 2em;
 }
 
 @media(max-width:767px) {
@@ -79,7 +100,7 @@ h6 {
     }
 
     .intro-message > h1 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
 
     ul.intro-social-buttons > li {
@@ -109,6 +130,17 @@ h6 {
     @include rink-image('kmportfolio', 'jpg')
 }
 
+.rink-kmabout {
+    @include rink-image-vertical('karenmclellan', 'jpg')
+}
+
+.rink-faceoff {
+    @include rink-image-vertical('faceoff', 'jpg')
+}
+
+.rink-waiting {
+    @include rink-image('waiting', 'jpg')
+}
 
 .learnmore {
     text-align: right;
@@ -176,6 +208,7 @@ h6 {
     }
 }
 
+
 .project-section {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -201,7 +234,48 @@ h6 {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+.about-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
+.about-content {
+    padding-left: 30px;
+    min-height: 550px;
+}
+
+.about-divider {
+    width: 100%;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.contact-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.contact-content {
+    padding-left: 30px;
+    min-height: 550px;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info h4 {
+    padding-top: 20px;
+}
+
+.blog-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.blog-info {
+    padding-left: 30px;
+}
 
 
 /* header {

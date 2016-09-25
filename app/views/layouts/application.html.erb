@@ -9,7 +9,6 @@
     
     <title>Professional and Learning Portfolios -- Karen McLellan</title>
     
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -17,13 +16,8 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-
-    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="/assets/javascripts/unslider-min.js"></script> 
-	<script>$(document).ready(function() { $('.banner').unslider() })</script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:300|Source+Sans+Pro" rel="stylesheet">
     
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -59,7 +53,7 @@
                         <%= link_to "Projects", projects_path %>
                     </li>
                     <li>
-                        <%= link_to "Blog", "http://www.karenmclellan.com/blog", :target => "blank" %>
+                        <%= link_to "Blog", blog_path %>
                     </li>
                     <li>
                         <%= link_to "Contact", contact_path %>
@@ -137,19 +131,23 @@
                 <div class="col-lg-12">
                     <ul class="list-inline">
                         <li>
-                            <a href="#">Home</a>
+                            <%= link_to "Home", root_path %>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#about">About</a>
+                            <%= link_to "About", about_path%>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#services">Services</a>
+                            <%= link_to "Projects", projects_path %>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <%= link_to "Blog", blog_path %>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <%= link_to "Contact", contact_path %>
                         </li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; Karen McLellan 2016. All Rights Reserved</p>
