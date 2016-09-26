@@ -59,6 +59,8 @@ h6 {
 .lead {
     font-size: 18px;
     font-weight: 400;
+    width: 75%;
+    padding-left: 25px;
 }
 
 .intro-header {
@@ -117,6 +119,9 @@ h6 {
         width: 100%;
     }
 }
+.rink-abmountain {
+    @include rink-image('abmountain', 'jpg')
+}
 
 .rink-openangle {
     @include rink-image('openanglescreen', 'jpg'); 
@@ -168,6 +173,7 @@ h6 {
 
 .section-heading {
     margin-bottom: 30px;
+    padding-left: 25px;
 }
 
 .section-heading-spacer {

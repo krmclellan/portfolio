@@ -16,7 +16,7 @@
 
 a {
 	color: grey;
-	font-weight: bold;
+	
 }
 
 a:hover {
@@ -42,6 +42,11 @@ a:hover {
 	text-decoration: none;
 }
 
+.navbar-right {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+
 
 .strip {
     padding: 100px 0;
@@ -63,7 +68,8 @@ a:hover {
 footer {
     padding: 50px 0;
     background-color: #f8f8f8;
-    font-style: semi-bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
 }
 
 footer a {
