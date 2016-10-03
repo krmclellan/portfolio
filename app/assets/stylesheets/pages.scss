@@ -2,16 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@mixin rink-image($file, $type, $width: 100%, $max-width: 550px, $height: 275px, $border: 12px solid #fdcb04, $border-radius: 65px,
+/* @mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;}
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  } 
+}*/
+
+@mixin rink-image($file, $type, $max-width: 100%, $height: 100%, $border: 12px solid #fdcb04, $border-radius: 65px,
     $padding: 20px, $margin: 10px, $background-repeat: no-repeat) {
     background: url($file + '.' + $type);
-    background-size: $width $height;
-    width: $width; height: $height;
-    max-width: $max-width;
+    
+    height: $height;
+    max-width: $max-width; 
     border: $border;
     border-radius: $border-radius;
     padding: $padding;
     margin: $margin;
+    background-repeat: $background-repeat;
 } 
 
 @mixin rink-image-vertical($file, $type, $width: 275px, $height: 550px, $border: 12px solid #fdcb04, $border-radius: 50px,
@@ -119,8 +136,16 @@ h6 {
         width: 100%;
     }
 }
+
+.rink {
+    height: 275px;
+    width: 585px;
+    margin-bottom: 15px;
+
+}
+
 .rink-abmountain {
-    @include rink-image('abmountain', 'jpg')
+    @include rink-image('abmountain', 'jpg');
 }
 
 .rink-openangle {
@@ -132,19 +157,19 @@ h6 {
 }
 
 .rink-kmportfolio {
-    @include rink-image('kmportfolio', 'jpg')
+    @include rink-image('kmportfolio', 'jpg');
 }
 
 .rink-kmabout {
-    @include rink-image-vertical('karenmclellan', 'jpg')
+    @include rink-image-vertical('karenmclellan', 'jpg');
 }
 
 .rink-faceoff {
-    @include rink-image-vertical('faceoff', 'jpg')
+    @include rink-image-vertical('faceoff', 'jpg');
 }
 
 .rink-waiting {
-    @include rink-image('waiting', 'jpg')
+    @include rink-image('waiting', 'jpg');
 }
 
 .learnmore {
