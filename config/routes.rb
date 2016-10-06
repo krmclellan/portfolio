@@ -5,5 +5,10 @@ Rails.application.routes.draw do
   get "/about" => "pages#about"
   get "/contact" => "pages#contact"
   get "/blog" => "pages#blog"
-  get "/guestbook" => "pages#guestbook"
+  get "/guestbook" => "pages#guestbook" #signup, login, logout link, show posts page (guestbook)
+  
+  resources :posts
+  get "/index" => "posts#index"
+ 
+
 end
