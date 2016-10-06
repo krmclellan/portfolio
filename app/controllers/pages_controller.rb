@@ -18,4 +18,8 @@ class PagesController < ApplicationController
 	def blog
 
 	end
+
+	def guestbook
+
+	end
 end
