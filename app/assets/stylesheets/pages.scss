@@ -21,12 +21,11 @@
 
 
 @mixin rink-image($width: 100%, $height: auto, $border: 12px solid #fdcb04, $border-radius: 65px,
-    $padding: 20px, $margin: 10px) {
+    $margin: 10px) {
     width: $width;
     height: $height;
     border: $border;
     border-radius: $border-radius;
-    padding: $padding;
     margin: $margin;
     }
 
@@ -296,7 +295,7 @@ h6 {
 }
 
 .guestbook-item {
-    padding-top: 20px;
+    padding-top: 30px;
     
 }
 
@@ -307,6 +306,7 @@ h6 {
 .comment_area {
     width: 300px;
     height: 83px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -316,11 +316,12 @@ h6 {
 
 .comment_list li {
     list-style: none;
-    padding: 25px;
+    padding: 30px;
     border: 3px solid #fdcb04;
     border-radius: 65px;
     margin-bottom: 30px;
     font-weight: strong;
+    line-height: 30px;
 }
 
 
