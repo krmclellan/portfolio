@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get "/guestbook" => "pages#guestbook" #signup, login, logout link, show posts page (guestbook)
   
   resources :posts
-  get "/index" => "posts#index"
+ 
+  resources :articles
  
 
 end
