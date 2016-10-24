@@ -3,19 +3,18 @@
 	<div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">New Blog Article<br />
-                    <small>Personal content creation</small>
-                </h1>
+                <h1 class="page-header"><%= @article.title %></h1>
             </div>
         </div>
-<div class="new-article-content"
-<p>
-<strong>Title:</strong>
+<div class="new-article-content">
+
+<div class="col-lg-12 imgFull-holder"></div>
+
+<h3>
 <%= @article.title %>
-</p>
+</h3>
 
 <p>
-<strong>Text:</strong>
 <%= @article.text %>
 </p>
 <br />
