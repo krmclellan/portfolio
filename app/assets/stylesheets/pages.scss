@@ -70,6 +70,8 @@ h6 {
     font-size: 14px; 
 }
 
+
+
 .lead {
     font-size: 18px;
     font-weight: 400;
@@ -328,6 +330,13 @@ h6 {
     margin: 30px;
     padding: 8px;
 }
+
+.user-info ul li {
+    display: inline;
+    text-decoration: none;
+    padding-right: 30px;
+}
+
 .blog-articles th {
     font-weight: strong;
     font-size: 18px;
@@ -354,7 +363,23 @@ h6 {
     background-color: #fdcb04;
 }
 
+.signup-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
 
+.signup-form {
+    margin: 50px 0 50px 0;
+}
+
+.login-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.login-form {
+    margin: 50px 0 50px 0;
+}
 /* header {
 	height: 125px;
 	background-color: $pale-sky;
