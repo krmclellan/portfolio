@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
 	
+	skip_before_action :verify_authenticity_token
 
 	def show
 		@article = Article.find(params[:id])

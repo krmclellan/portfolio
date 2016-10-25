@@ -1,3 +1,4 @@
+
 <%= form_for @article do |f| %>
 
 	<% if @article.errors.any? %>
@@ -16,16 +17,19 @@
  
 	 <p>
 	   <%= f.label :title %><br>
-	   <%= f.text_field :title %>
+	   <%= f.text_field :title, size: "51x1" %>
 	 </p>
 	 
-	 <p>
+	<p>
 	   <%= f.label :text %><br>
-	   <%= f.text_area :text %>
+	   <%= f.text_area :text, size: "50x10", id: "edit" %>
 	 </p>
 	 
-	 <p>
-	   <%= f.submit %>
-	 </p>
+	
+	   <p><%= f.submit %></p>
+	
  
 <% end %>
+
+
+  

@@ -9,16 +9,20 @@
 
 	<div class="login-form">
 		<%= form_for(:session, url: login_path) do |f| %>
-			<%= f.label :name %>
-			<%= f.text_field :name %><br />
+			<table class="form_table">
+			
+			<tr>
+			<td class="form_label"><%= f.label :email %></td>
+			<td class="form_field"><%= f.text_field :email %></td>
+			</tr>
 
-			<%= f.label :email %>
-			<%= f.text_field :email %><br />
+			<tr>
+			<td class="form_label"><%= f.label :password %></td>
+			<td class="form_field"><%= f.password_field :password %></td>
+			</tr>
+			</table>
 
-			<%= f.label :password %>
-			<%= f.text_field :password %><br />
-
-			<%= f.submit "Create" %>
+			<%= f.submit "Log In" %>
 		<% end %>
 	</div>
 	</div>

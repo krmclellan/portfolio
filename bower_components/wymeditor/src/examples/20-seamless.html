@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WYMeditor</title>
+    <!-- build:css ../wymeditor/skins/seamless/skin.css -->
+    <link rel="stylesheet" type="text/css" href="../wymeditor/skins/seamless/skin.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <h1>WYMeditor with a seamless skin</h1>
+    <h2>Look ma! No double scrollbar!</h2>
+    <p><a href="http://www.wymeditor.org/">WYMeditor</a> is a web-based XHTML WYSIWYM editor.</p>
+    <form method="post" action="">
+        <!--
+            The seamless skin uses the height of your textarea as the minimum
+            editor height.
+        -->
+        <textarea class="wymeditor" style="min-height: 300px"></textarea>
+        <input type="submit" class="wymupdate" />
+    </form>
+    <p style="height: 5000px">The floating toolbar will stop here.</p>
+
+    <!--for IE8, ES5 shims are required-->
+    <!--[if IE 8]>
+    <!-- build:js vendor/es5-shim.js -->
+    <script type="text/javascript" src="../lib/es5-shim.js"></script>
+    <!-- endbuild -->
+    <!-- build:js vendor/es5-sham.js -->
+    <script type="text/javascript" src="../lib/es5-sham.js"></script>
+    <!-- endbuild -->
+    <![endif]-->
+
+    <!-- build:js vendor/jquery/jquery.js -->
+    <!-- endbuild -->
+    <!-- build:js ../wymeditor/jquery.wymeditor.js -->
+    <script type="text/javascript" src="../test/load-src.dev.js"></script>
+    <script type="text/javascript">
+        loadWymSrc(
+                '../',
+                ['../wymeditor/skins/seamless/skin.js']
+        );
+    </script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+        jQuery(function() {
+            jQuery('.wymeditor').wymeditor({
+              html: [
+                '<p>Some initial content...</p>',
+                '<p>And an image for asynchronously added size:</p>',
+                '<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Flag_of_Indiana.svg/500px-Flag_of_Indiana.svg.png" alt="Flag of Indiana"></p>',
+                '<p>Type in a few paragraphs and see the editor grow in height.</p>'
+              ].join(''),
+                skin: 'seamless',
+                // We already included the seamless skin's javascript so that we could
+                // use this constant
+                iframeHtml: WYMeditor.SKINS.seamless.OPTS.iframeHtml
+            });
+        });
+    </script>
+</body>
+</html>
