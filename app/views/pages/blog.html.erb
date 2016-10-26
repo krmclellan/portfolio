@@ -1,4 +1,7 @@
 <!-- Blog Item Heading -->
+<% content_for :head do %>
+<title>Technical Blog - Karen McLellan</title>
+<% end %>
         
 <div class="blog-section">
     <div class="container">
@@ -34,7 +37,7 @@
                     <div class="col-md-4 img320-holder"></div>
 
                     <div class="col-md-8">
-                    <p><%= article.text %></p>
+                    <p><%= truncate article.text, length: 700 %></p>
                     <p><%= link_to "More", article_path(article) %></p>
                     </div>
                     </div>

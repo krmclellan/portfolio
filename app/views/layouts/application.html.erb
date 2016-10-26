@@ -9,9 +9,8 @@
     
     <title>Learning Portfolio -- Karen McLellan</title>
     
-
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/stylesheet/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
     <!-- Custom Fonts -->
@@ -19,16 +18,6 @@
     
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:300|Source+Sans+Pro" rel="stylesheet">
    
-    <!-- Include Editor style. -->
-    <link href="../css/froala_editor.min.css" rel="stylesheet" type="text/css" />
-    <link href="../css/froala_style.min.css" rel="stylesheet" type="text/css" />
-
-  <!-- CSS rules for styling the element inside the editor such as p, h1, h2, etc. -->
-    <link href="../css/froala_style.min.css" rel="stylesheet" type="text/css" />
-
-
-  <!-- Include Code Mirror style -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
 
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -39,6 +28,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <%= yield :head %>
+
   </head>
 
  <!-- Navigation -->
@@ -168,24 +159,13 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="javascripts/jquery.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
 
-    <!-- Include JS files. -->
-    <script type="text/javascript" src="../js/froala_editor.min.js"></script>
-
-    <!-- Include Code Mirror. -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
-
-    <script>
-      $(function() {
-          $('#edit').froalaEditor()
-      });
-    </script>
+    
 
     <!-- Google Analytics -->
     <script>
@@ -197,7 +177,7 @@
       ga('create', 'UA-26699456-1', 'auto');
       ga('send', 'pageview');
 
-</script>
+    </script>
     
 
 </html>

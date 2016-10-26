@@ -15,21 +15,22 @@
     	</div>
   	<% end %>
  
-	 <p>
-	   <%= f.label :title %><br>
-	   <%= f.text_field :title, size: "51x1" %>
-	 </p>
-	 
-	<p>
-	   <%= f.label :text %><br>
-	   <%= f.text_area :text, size: "50x10", id: "edit" %>
-	 </p>
+		<p>
+		   <%= f.label :title %><br>
+		   <%= f.text_field :title, size: "51x1" %>
+		</p>
 	 
 	
-	   <p><%= f.submit %></p>
+		<p><%= f.label :text %></p>  
+		<div id="edit" name="content"><%= f.text_area :text %></div>
+	
+	 
+	
+	   	<p><%= f.submit %></p>
 	
  
 <% end %>
+
 
 
   
