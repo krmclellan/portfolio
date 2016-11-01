@@ -37,7 +37,7 @@
                     <div class="col-md-4 img320-holder"></div>
 
                     <div class="col-md-8">
-                    <p><%= truncate article.text, length: 700 %></p>
+                    <p><%= truncate article.text.html_safe, length: 500 %></p>
                     <p><%= link_to "More", article_path(article) %></p>
                     </div>
                     </div>
