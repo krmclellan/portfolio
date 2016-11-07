@@ -12,10 +12,38 @@
 
 	<div class="new-article">
 		<h2>New Article</h2>
+		<%= form_for @article do |f| %>
 
+	<% if @article.errors.any? %>
+		<div id="error_explaination">
+			<h3>
+	        <%= pluralize(@article.errors.count, "error") %> prohibited
+	        this article from being saved:
+	      	</h3>
+		     <ul>
+		        <% @article.errors.full_messages.each do |msg| %>
+		          <li><%= msg %></li>
+		        <% end %>
+		     </ul>
+    	</div>
+  	<% end %>
+ 
+		<p>
+		   <%= f.label :title %><br>
+		   <%= f.text_field :title, size: "51x1" %>
+		</p>
+			 
+		<p><%= f.label :text %></p>  
 		
+			<%= f.text_area :text, :id => 'froala-editor' %>
+				
+		
+	
+	   	<p><%= f.submit %></p>
+	
+ 
+<% end %>
 
-		<%= render 'form' %>
 		
 		<br>
 		<%= link_to 'Back', blog_path %>
@@ -23,15 +51,12 @@
 	</div>
 </div>
 
+
+
 	<script>
 	  $(function() {
-	    $('#froala-editor').froalaEditor({
+	      $('#froala-editor').froalaEditor({
 	    	toolbarButtons: ['bold', 'italic', 'underline', 'fontFamily', 'fontSize', '|', 'color', 'emoticons', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', '-', 'insertLink', 'insertImage', '|', 'quote', 'undo', 'redo', 'clearFormatting', 'selectAll', 'html']
 	    })
 	  });
-	</script> 
-
-	
-	
- 
- 
+	</script>

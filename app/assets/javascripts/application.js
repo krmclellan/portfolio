@@ -43,5 +43,4 @@
 //= require plugins/url.min.js
 //= require plugins/video.min.js
 //= require_tree .
-//
 //= require turbolinks
