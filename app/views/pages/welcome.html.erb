@@ -40,7 +40,8 @@
 
 <!-- Page Content -->
 
-	<a  name="services"></a>
+	
+    
     <div class="content-section-a">
 
         <div class="container">
@@ -48,17 +49,23 @@
                 <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Learning Portfolio</h2>
-                <div class="col-xs-12 col-md-6">  
-                    <div class="rink-openangle">
-                        
-                    </div> 
+                    <p class="lead">As a former internet marketer and current technical writer, I have been working with web technology since 2004. After years of dabbling in development, I've reached the point where I need to build something to apply what I've learned.</p>
+                    <p class="lead">This website will showcase what I build.</p>
+                
+                
+                <div class="col-md-6">  
+                    <%= link_to "http://www.openangle.ca" do %>
+                        <%= link_to image_tag("openanglescreen.jpg", :class => "rink_img"), "http://www.openangle.ca", :target => "_blank" %>
+                    <% end %>
+                </div>
+                
+
+                <div class="col-md-6"> 
                     
+                    <%= link_to image_tag("codecademy.jpg", :class => "rink_img"), "http://www.codecademy.com", :target => "_blank" %>
+                   
                 </div>
-                <div class="col-xs-12 col-md-6"> 
-                    <div class="rink-codecademy">
-                        
-                    </div>
-                </div>
+               
                 
             </div>
         <div class="learnmore"><%= link_to "See what I've been up to >>", projects_path %></div>
@@ -69,6 +76,28 @@
 
     </div>
     <!-- /.content-section-a -->
+
+    <!-- <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
+                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/dog.png" alt="">
+                </div>
+            </div>
+
+        </div> -->
+        <!-- /.container -->
+
+   <!-- </div> -->
+<!-- /.content-section-b --> 
 
     
 

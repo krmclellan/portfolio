@@ -2,26 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@mixin rink-image($file, $type, $width: 100%, $max-width: 550px, $height: 275px, $border: 12px solid #fdcb04, $border-radius: 65px,
-    $padding: 20px, $margin: 10px, $background-repeat: no-repeat) {
-    background: url($file + '.' + $type);
-    background-size: $width $height;
-    width: $width; height: $height;
-    max-width: $max-width;
-    border: $border;
-    border-radius: $border-radius;
-    padding: $padding;
-    margin: $margin;
-} 
+/* @mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;}
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  } 
+}*/
 
-@mixin rink-image-vertical($file, $type, $width: 275px, $height: 550px, $border: 12px solid #fdcb04, $border-radius: 50px,
-    $padding: 20px, $margin: 10px, $background-repeat: no-repeat) {
-    background: url($file + '.' + $type);
-    background-size: $width $height;
-    width: $width; height: $height;
+
+
+@mixin rink-image($width: 100%, $height: auto, $border: 12px solid #fdcb04, $border-radius: 65px,
+    $margin: 10px) {
+    width: $width;
+    height: $height;
     border: $border;
     border-radius: $border-radius;
-    padding: $padding;
+    margin: $margin;
+    }
+
+@mixin rink-image-vertical($width: 100%, $height: auto, $border: 12px solid #fdcb04, $border-radius: 50px,
+    $margin: 10px) {
+    width: $width;
+    height: $height;
+    border: $border;
+    border-radius: $border-radius;
     margin: $margin;
 }
 
@@ -56,9 +69,13 @@ h6 {
     font-size: 14px; 
 }
 
+
+
 .lead {
     font-size: 18px;
     font-weight: 400;
+    width: 75%;
+    padding-left: 25px;
 }
 
 .intro-header {
@@ -118,28 +135,18 @@ h6 {
     }
 }
 
-.rink-openangle {
-    @include rink-image('openanglescreen', 'jpg'); 
+.rink {
+    height: 275px;
+    width: 585px;
+    margin-bottom: 15px;
 }
 
-.rink-codecademy {
-    @include rink-image('codecademy', 'jpg');
+.rink_img {
+    @include rink-image();
 }
 
-.rink-kmportfolio {
-    @include rink-image('kmportfolio', 'jpg')
-}
-
-.rink-kmabout {
-    @include rink-image-vertical('karenmclellan', 'jpg')
-}
-
-.rink-faceoff {
-    @include rink-image-vertical('faceoff', 'jpg')
-}
-
-.rink-waiting {
-    @include rink-image('waiting', 'jpg')
+.rink_img_v {
+    @include rink-image-vertical();
 }
 
 .learnmore {
@@ -168,6 +175,7 @@ h6 {
 
 .section-heading {
     margin-bottom: 30px;
+    padding-left: 25px;
 }
 
 .section-heading-spacer {
@@ -244,6 +252,10 @@ h6 {
     min-height: 550px;
 }
 
+.about-info {
+    padding-left: 40px;
+}
+
 .about-divider {
     width: 100%;
     border-top: 1px solid #f8f8f8;
@@ -262,6 +274,7 @@ h6 {
 
 .contact-info {
     margin-top: 40px;
+    padding-left: 40px;
 }
 
 .contact-info h4 {
@@ -277,7 +290,95 @@ h6 {
     padding-left: 30px;
 }
 
+.guestbook-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
+.guestbook-item {
+    padding-top: 30px;
+    
+}
+
+.guestbook-info {
+    padding-left: 30px;
+}
+
+.comment_area {
+    width: 300px;
+    height: 83px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.guest_button {
+    margin-bottom: 30px;
+}
+
+.comment_list li {
+    list-style: none;
+    padding: 30px;
+    border: 3px solid #fdcb04;
+    border-radius: 65px;
+    margin-bottom: 30px;
+    font-weight: strong;
+    line-height: 30px;
+}
+
+.article-links button {
+    margin: 30px;
+    padding: 8px;
+}
+
+.user-info ul li {
+    display: inline;
+    text-decoration: none;
+    padding-right: 30px;
+}
+
+.blog-articles th {
+    font-weight: strong;
+    font-size: 18px;
+    padding-top: 30px;
+}
+.blog-articles tr {
+    line-height: 42px;
+} 
+
+.blog-articles td {
+    padding-right: 40px;
+}
+
+.blog-post {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.img320-holder {
+    height: 160px;
+    width: 320px;
+    margin-left: 18px;
+    margin-right: 18px;
+    background-color: #fdcb04;
+}
+
+.signup-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.signup-form {
+    margin: 50px 0 50px 0;
+}
+
+.login-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.login-form {
+    margin: 50px 0 50px 0;
+}
 /* header {
 	height: 125px;
 	background-color: $pale-sky;
@@ -326,6 +427,8 @@ h6 {
 .contentinfo {
   @include bleed($grid-padding);
 }
+
+
 
 /* footer {
 	margin: auto;

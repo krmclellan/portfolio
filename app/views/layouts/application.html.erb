@@ -7,18 +7,43 @@
     <meta name="description" content="Personal and professional portfolio site for Karen McLellan">
     <meta name="author" content="Karen McLellan">
     
-    <title>Professional and Learning Portfolios -- Karen McLellan</title>
+    <title>Learning Portfolio -- Karen McLellan</title>
     
-
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
     
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:300|Source+Sans+Pro" rel="stylesheet">
-    
+
+  <!-- Include Editor style. -->
+    <link href="../stylesheets/froala_editor.min.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- CSS rules for styling the element inside the editor such as p, h1, h2, etc. -->
+     <link href="../stylesheets/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+
+  <!-- Include Code Mirror style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+
+    <!-- Include Editor Plugins style. -->
+      <link rel="stylesheet" href="../stylesheets/plugins/char_counter.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/code_view.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/colors.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/emoticons.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/file.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/fullscreen.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/image.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/image_manager.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/line_breaker.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/quick_insert.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/table.css">
+      <link rel="stylesheet" href="../stylesheets/plugins/video.css">
+
+
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -28,6 +53,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <%= yield :head %>
+
   </head>
 
  <!-- Navigation -->
@@ -53,7 +80,7 @@
                         <%= link_to "Projects", projects_path %>
                     </li>
                     <li>
-                        <%= link_to "Blog", blog_path %>
+                        <%= link_to "Blog", blog_path, controller: 'articles' %>
                     </li>
                     <li>
                         <%= link_to "Contact", contact_path %>
@@ -156,10 +183,55 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../javascripts/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../javascripts/bootstrap.min.js"></script>
+
+    <!-- Include JS files. -->
+      <script type="text/javascript" src="../javascripts/froala_editor.min.js"></script>
+
+     <!-- Include the plugins JS files. -->
+      <script type="text/javascript" src="../javascripts/plugins/align.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/char_counter.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/code_view.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/colors.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/emoticons.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/entities.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/file.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/font_family.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/font_size.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/fullscreen.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/image.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/image_manager.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/inline_style.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/line_breaker.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/link.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/lists.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/paragraph_format.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/paragraph_style.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/quick_insert.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/quote.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/save.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/table.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/url.min.js"></script>
+      <script type="text/javascript" src="../javascripts/plugins/video.min.js"></script>
+
+      <!-- Include Code Mirror JS. -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-26699456-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
 
 </html>

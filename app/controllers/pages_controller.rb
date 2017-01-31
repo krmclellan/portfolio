@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
 	def welcome
 		
 	end
@@ -16,6 +17,11 @@ class PagesController < ApplicationController
 	end
 
 	def blog
+		@articles = Article.all
+	end
 
+	def guestbook
+		@new_post = Post.new
+		@all_posts = Post.order(created_at: :desc).all
 	end
 end
