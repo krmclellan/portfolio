@@ -1,5 +1,7 @@
 require_relative 'boot'
 
+#config.serve_static_assets = true
+
 require 'rails/all'
 require 'susy'
 # Require the gems listed in Gemfile, including any gems
