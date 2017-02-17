@@ -191,6 +191,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   compass-rails (~> 2.0.0)
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
