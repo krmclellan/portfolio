@@ -35,8 +35,6 @@
  *= require plugins/video.min.css
  */
 
-@import "font-awesome-sprockets";
-@import "font-awesome";
  
 @font-face {
     font-family: 'FontAwesome';
